@@ -5,12 +5,16 @@ const SchedulingSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    descripton: {
+    description: {
         type: String
     },
     clientCpf: {
         type: String,
         required: true
+    },
+    client: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Client',
     },
     licensePlate: {
         type: String,

@@ -27,10 +27,12 @@ export function Scheduling() {
   async function handleSubmitForm(event) {
     event.preventDefault()
 
+    const filteredCpf = cpf.replace('.', '').replace('.', '').replace('-', '')
+
     const requestbody = {
       dateOfScheduling: scheduleISODatetime,
-      descripton: event.target.description.value,
-      clientCpf: cpf,
+      description: event.target.description.value,
+      clientCpf: filteredCpf,
       licensePlate: event.target.licensePlate.value
     }
 

@@ -1,13 +1,13 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const secret = require('../../config/auth.json')
+const unless = require('../helpers/unless')
 
 const Employee = require('../model/employee');
 
 const router = express.Router();
 
 const authMiddleware = require('../middlewares/auth');
-const unless = require('../helpers/unless');
 
 router.use(unless(['/employee/login', '/employee/create'], authMiddleware));
 

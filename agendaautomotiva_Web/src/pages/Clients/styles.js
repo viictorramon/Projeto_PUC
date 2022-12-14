@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const EmployeeContainer = styled.div`
+export const ClientsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -18,7 +18,7 @@ export const EmployeeContainer = styled.div`
   }
 `
 
-export const ListOfScheduling = styled.div`
+export const ListOfClients = styled.div`
   display: flex;
   flex-direction: column;
 `

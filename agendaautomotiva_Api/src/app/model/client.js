@@ -2,17 +2,14 @@ const mongoose = require('../../database');
 
 const ClientSchema = new mongoose.Schema({
     name: {
-        type: String,
-        required: true,
+        type: String
     },
     email: {
         type: String,
-        unique: true,
-        required: true,
-        lowecase: true,
+        lowecase: true
     },
     cpf: {
-        type: Number,
+        type: String,
         unique: true,
         required: true
     },
